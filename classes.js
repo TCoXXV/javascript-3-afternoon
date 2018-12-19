@@ -116,10 +116,22 @@ class ProgressiveManager {
   makeWidget() {
     return this.first_name + ' ' + this.last_name + ' Widget';
   }
-  hire(employee){this.reports.push(employee)}
-  fire(index){this.reports.splice(index,1)}
+  hire(employee){
+    // if(this.reports === 0){
+    //   this.title = 'Not a manager'
+    // }
+    // if(this.reports >0 && this.reports < 4){
+    //   this.title = 'Barely Manager'
+    // }
+    return this.reports.push(employee)}
+  fire(index){return this.reports.splice(index,1)}
 };
-
+// 0 reports : Not a manager
+// 1-3 reports : Barely Manager
+// 4-10 reports : Mostly Manager
+// 11-50 reports : Manager
+// 51-100 reports : Manager Plus
+// 101+ reports : Bestest Manager
 
 
 ////////// PROBLEM 4 - Black Diamond //////////
